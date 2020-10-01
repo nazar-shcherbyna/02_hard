@@ -1,0 +1,147 @@
+body {
+    background-color: #990909;
+    padding: 15px;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /*Прижать footer к низу */
+    box-sizing: border-box; /* Убрать прокрутку справа */
+}
+
+a {
+    transition: all .3 linear;
+}
+
+h1 {
+    margin: 0;
+}
+
+h1 img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+nav {
+    background-color: #000000;
+    padding: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /*Убрать маркеры */
+    display: flex;
+    justify-content: space-around;/* Распределяет элементы по оси Х внутри блока */
+    flex-wrap: wrap; /*Если не вмещаеться в строку переноситься на нoвую строку*/
+}
+
+nav ul li {
+    width: 20%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;/*Убираем нижнее подчеркивание*/
+    display: block; /*Превращаем строчную ссылку в блочный елемент, останавливаем анимацию*/
+    border: 4px solid transparent; /* Вводим рамки */
+}
+
+nav ul li a:hover,/* Водим мышкой */
+nav ul li a:focus,
+nav ul li a:active {
+    border-color: #fff;
+}
+
+figure {
+    margin: 5px;
+}
+
+figure img {
+width: 100%;
+}
+
+.left-aside{
+    background-color: #460303;
+}
+
+.right-aside{
+    background-color: #e4dddd;
+    color: #333333;
+}
+
+.right-aside h2 {
+    text-align: center;
+    background-color: #888;
+    margin: 0;
+    font-size: 22px;
+}
+
+.right-aside p::before {
+    content: '';
+    display: block;
+    width: 50%;
+    border: 1px solid #888;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto 10px; /* сверху лево-право снизу */
+}
+
+aside {
+    min-width: 25%;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+
+}
+
+main, aside, footer {
+    padding: 15px; /* Толщина отступов */
+}
+
+footer {
+    background-color: orange;
+    text-align: center;
+    font-size: 20px;
+}
+
+.left-aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+.left-aside ul li {
+    margin-bottom: 15px; 
+}
+
+.left-aside ul li a {
+    color: orange;
+}
+
+.left-aside ul li a:hover,
+.left-aside ul li a:focus,
+.left-aside ul li a:active {
+    color: #14da1e;
+}
+
+/* adaptaition for mobile*/
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    nav ul li {
+        width: 45%;
+    }
+}
